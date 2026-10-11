@@ -1,0 +1,32 @@
+{
+  "name": "functions",
+  "description": "Cloud Functions to handle telegram channel",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "tsc",
+    "lint": "tsc --noEmit",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "local": "bash scripts/local-test.sh",
+    "deploy": "npm run build && firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^11.11.0",
+    "firebase-functions": "^4.6.0",
+    "telegraf": "^4.14.0",
+    "telegraf-ratelimit": "^2.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.6.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0",
+    "typescript": "^5.9.3"
+  },
+  "private": true
+}

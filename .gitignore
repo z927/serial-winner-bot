@@ -1,0 +1,8 @@
+node_modules
+lib
+.runtimeconfig.json
+src/res/serviceAccountFirebase.json
+src/res/resources.txt
+emulator.log
+firestore-debug.log
+*.log
